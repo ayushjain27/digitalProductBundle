@@ -133,7 +133,7 @@ const Dashboard = () => {
       image: Image6,
       price: "Price: Rs 149",
       gradient: "from-rose-400 to-fuchsia-500",
-      link: ''
+      link: 'https://superprofile.bio/vp/landing-pages-bundle--445'
     },
     {
       image: Image7,
@@ -145,7 +145,7 @@ const Dashboard = () => {
       image: Image8,
       price: "Price: Rs 99",
       gradient: "from-emerald-400 to-lime-500",
-      link: ''
+      link: 'https://superprofile.bio/vp/11000--kids-worksheet-bundle'
     },
     {
       image: Image9,
