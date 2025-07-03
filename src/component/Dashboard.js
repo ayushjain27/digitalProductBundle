@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Menu,
   X,
@@ -20,18 +20,28 @@ import {
   UserCircle2,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import Image1 from "../images/Thumbnails Assets Pack Bundle.png";
-import Image2 from "../images/GRAPHICBUNDLE-675-GB-PLAN-si8jx2.png";
-import Image3 from "../images/AI Reels Bundle.png";
-import Image4 from "../images/ALL-in-One-Bundle.png";
-import Image5 from "../images/2025 New Digital Products.png";
-import Image6 from "../images/1700  ai reels Bundle DM Digital _20231116_201830_0000.png";
-import Image7 from "../images/500+ 𝙒𝙤𝙧𝙙𝙋𝙧𝙚𝙨𝙨 𝙀𝙡𝙚𝙢𝙚𝙣𝙩𝙤𝙧 𝙏𝙚𝙢𝙥𝙡𝙖𝙩𝙚 𝙆𝙞𝙩𝙨.png";
-import Image8 from "../images/30,000+ SOCIAL MEDIA POSTS BUNDLE.png";
+import Image1 from "../images/social post bundle.jpeg";
+import Image2 from "../images/AI health reels.jpeg";
+import Image3 from "../images/AI premium reels.jpeg";
+import Image4 from "../images/Viral links.jpeg";
+import Image5 from "../images/Graphic Designer Pack.jpeg";
+import Image6 from "../images/50+ landing Pages.jpeg";
+import Image7 from "../images/AI Monkey.jpeg";
+// import Image10 from "../images/Digital Prodcut.jpeg";
+import Image8 from "../images/11000+ kids.jpeg";
+import Image9 from "../images/luxury clips.jpeg";
+import Image10 from "../images/Thumbnails.jpeg";
+import Image11 from "../images/ADD.jpg";
 
 const Dashboard = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const productsRef = useRef(null);
+
+  // Scroll handler function
+  const scrollToProducts = () => {
+    productsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +54,6 @@ const Dashboard = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "Products", href: "#products" },
-    { name: "Bundles", href: "#bundles" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
@@ -91,73 +100,81 @@ const Dashboard = () => {
 
   const productCategories = [
     {
-      title: "MRR eBook Bundles",
-      description: "Complete packages ready to sell with full rights",
       image: Image1,
-      price: "From $29",
-      bestseller: true,
+      price: "Price: Rs 299",
       gradient: "from-blue-500 to-purple-600",
+      link: 'https://superprofile.bio/vp/social-media-posts-bundle-'
     },
     {
-      title: "PLR Content Packs",
-      description: "Customizable digital products for your brand",
       image: Image2,
-      price: "From $19",
+      price: "Price: Rs 299",
       gradient: "from-green-500 to-blue-500",
+      link: 'https://superprofile.bio/vp/ai-health-reels-bundle--692'
     },
     {
-      title: "Graphics Bundles",
-      description: "Professional design assets and templates",
       image: Image3,
-      price: "From $24",
-      gradient: "from-pink-500 to-red-500",
-    },
-    {
-      title: "Social Media Kits",
-      description: "Eye-catching templates for posts and stories",
-      image: Image4,
-      price: "From $22",
+      price: "Price: Rs 99",
       gradient: "from-yellow-400 to-orange-500",
+      link: 'https://superprofile.bio/vp/ai-premium-reels-bundle-'
     },
     {
-      title: "Canva Templates",
-      description: "Easy-to-edit designs for marketers and coaches",
-      image: Image5,
-      price: "From $21",
+      image: Image4,
+      price: "Price: Rs 149",
       gradient: "from-teal-400 to-cyan-500",
+      link: 'https://superprofile.bio/vp/aaa-45'
     },
     {
-      title: "Business Starter Packs",
-      description: "Ready-made tools for online entrepreneurs",
-      image: Image6,
-      price: "From $35",
+      image: Image5,
+      price: "Price: Rs 199",
       gradient: "from-indigo-500 to-blue-400",
+      link: 'https://superprofile.bio/vp/ultimate-graphic-designer-pack'
     },
     {
-      title: "Email Marketing Kits",
-      description: "Pre-written email sequences to boost sales",
-      image: Image7,
-      price: "From $18",
+      image: Image6,
+      price: "Price: Rs 149",
       gradient: "from-rose-400 to-fuchsia-500",
+      link: ''
     },
     {
-      title: "Ecommerce Branding Packs",
-      description: "Logo, palette & brand kit for your store",
-      image: Image8,
-      price: "From $26",
+      image: Image7,
+      price: "Price: Rs 99",
       gradient: "from-emerald-400 to-lime-500",
+      link: 'https://superprofile.bio/vp/ai-monkey-vlogs-898'
+    },
+    {
+      image: Image8,
+      price: "Price: Rs 99",
+      gradient: "from-emerald-400 to-lime-500",
+      link: ''
+    },
+    {
+      image: Image9,
+      price: "Price: Rs 99",
+      gradient: "from-emerald-400 to-lime-500",
+      link: 'https://superprofile.bio/vp/luxury-clips--725'
+    },
+    {
+      image: Image10,
+      price: "Price: Rs 199",
+      gradient: "from-emerald-400 to-lime-500",
+      link: 'https://superprofile.bio/vp/thumbnail-assets-pack-bundle'
+    },
+    {
+      image: Image11,
+      price: "Price: Rs 1899",
+      gradient: "from-emerald-400 to-lime-500",
+      link: 'https://superprofile.bio/vp/the-digitalproductbundle'
     },
   ];
-  
 
   const stats = [
     {
-      number: "500+",
+      number: "10+",
       label: "Digital Products",
       icon: <BookOpen className="w-6 h-6" />,
     },
     {
-      number: "10K+",
+      number: "1K+",
       label: "Happy Customers",
       icon: <Users className="w-6 h-6" />,
     },
@@ -246,7 +263,7 @@ const Dashboard = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
+      <section className="pt-20 pb-16 px-4" id="home">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
             <div className="space-y-8">
@@ -255,25 +272,24 @@ const Dashboard = () => {
               </div>
 
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Get on the Road to{" "}
+                Get on the Road to
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  Digital Riches
+                  Digital Success Today!
                 </span>
               </h1>
 
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Entrepreneurship is one step closer with our fully sorted &
-                packaged MRR eBook bundles and PLR content. Start your digital
-                business today!
+                With 10+ ready-to-sell digital products at your fingertips, your
+                profitable online store is just one click away.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl">
+                <button
+                  onClick={scrollToProducts}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                >
                   <span>Explore Products</span>
                   <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-blue-500 hover:text-blue-600 transition-all duration-200">
-                  View Bundles
                 </button>
               </div>
 
@@ -310,9 +326,7 @@ const Dashboard = () => {
                     <p className="font-semibold text-gray-900">
                       Instant Access
                     </p>
-                    <p className="text-sm text-gray-600">
-                      Download immediately
-                    </p>
+                    <p className="text-sm text-gray-600">Buy Now</p>
                   </div>
                 </div>
               </div>
@@ -339,8 +353,9 @@ const Dashboard = () => {
               Why Choose Digital Product?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We make digital entrepreneurship accessible to everyone with our
-              comprehensive bundles and unbeatable prices
+              Launch your digital empire effortlessly with our premium
+              collections - curated for maximum profitability with zero
+              technical hassle.
             </p>
           </div>
 
@@ -367,7 +382,11 @@ const Dashboard = () => {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50" id="products">
+      <section
+        ref={productsRef}
+        className="py-20 bg-gradient-to-br from-blue-50 to-purple-50"
+        id="products"
+      >
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -379,11 +398,12 @@ const Dashboard = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {productCategories.map((product, index) => (
+            {productCategories.slice(0, 8).map((product, index) => (
               <div key={index} className="group">
                 <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full">
                   {/* 🖼️ Larger Image Section */}
-                  <div className="relative h-[420px] sm:h-[400px] md:h-[300px] lg:h-[500px] overflow-hidden rounded-t-2xl">
+                  {/* <div className="relative h-[300px] sm:h-[400px] md:h-[300px] lg:h-[500px] overflow-hidden rounded-t-2xl"> */}
+                  <div className="relative h-[400px] overflow-hidden rounded-t-2xl">
                     <img
                       src={product.image}
                       alt={product.title}
@@ -396,20 +416,93 @@ const Dashboard = () => {
 
                   {/* 📄 Compact Text Section */}
                   <div className="p-4">
-                    <h3 className="text-lg font-semibold mb-2 text-gray-900">
-                      {product.title}
-                    </h3>
-                    <p className="text-gray-600 mb-3 text-sm leading-snug">
-                      {product.description}
-                    </p>
                     <div className="flex justify-between items-center">
                       <span className="text-xl font-bold text-blue-600">
                         {product.price}
                       </span>
                       <button
                         className={`bg-gradient-to-r ${product.gradient} text-white px-5 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-200`}
+                        onClick={() => window.open(product.link, "_blank")}
                       >
-                        View Details
+                        Buy Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {productCategories.slice(8, 10).map((product, index) => (
+              <div key={index} className="group">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full">
+                  {/* 🖼️ Larger Image Section */}
+                  {/* <div className="relative h-[300px] sm:h-[400px] md:h-[300px] lg:h-[500px] overflow-hidden rounded-t-2xl"> */}
+                  <div className="relative h-[230px] overflow-hidden rounded-t-2xl">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-full h-100 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-r ${product.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-300`}
+                    ></div>
+                  </div>
+
+                  {/* 📄 Compact Text Section */}
+                  <div className="p-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xl font-bold text-blue-600">
+                        {product.price}
+                      </span>
+                      <button
+                        className={`bg-gradient-to-r ${product.gradient} text-white px-5 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-200`}
+                        onClick={() => window.open(product.link, "_blank")}
+                      >
+                       Buy Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center m-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Special Bundle
+            </h2>
+            <p className="text-xl text-gray-600">
+              Discover our best-selling digital product bundles
+            </p>
+          </div>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {productCategories.slice(10, 11).map((product, index) => (
+              <div key={index} className="group">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden h-full">
+                  {/* 🖼️ Larger Image Section */}
+                  {/* <div className="relative h-[300px] sm:h-[400px] md:h-[300px] lg:h-[500px] overflow-hidden rounded-t-2xl"> */}
+                  <div className="relative h-[400px] overflow-hidden rounded-t-2xl">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="w-full h-100 object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-r ${product.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-300`}
+                    ></div>
+                  </div>
+
+                  {/* 📄 Compact Text Section */}
+                  <div className="p-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-xl font-bold text-blue-600">
+                        {product.price}
+                      </span>
+                      <button
+                        className={`bg-gradient-to-r ${product.gradient} text-white px-5 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-200`}
+                        onClick={() => window.open(product.link, "_blank")}
+                      >
+                        Buy Now
                       </button>
                     </div>
                   </div>
@@ -420,19 +513,52 @@ const Dashboard = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      {/* <section className="py-20 bg-white" id="about">
+      {/* About Us Section */}
+      <section className="pt-12 bg-white" id="about">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              About Us
-            </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                About Us
+              </h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  Easy Resell is a PLR ecommerce website designed to assist
+                  potential entrepreneurs to find digital products like Ebooks,
+                  Kids and Adults Coloring Books, Activity Books, Editable
+                  Templates of T-shirt Designs, Graphic Design Bundles, Social
+                  Media Templates (for Instagram, Facebook, Twitter, Snapchat, &
+                  Pinterest), Website Themes & Plugins, YouTube Thumbnails,
+                  Royalty Free Videos, Royalty Free Music, Flyers & Brochures,
+                  Business Letterheads, Fonts, Logo Vectors, Business Cards,
+                  Adobe Premier Pro Assets, Digital Marketing Bundles, Landing
+                  Page Designs, Readymade Templates for Powerpoint
+                  Presentations, Wedding Invitations, and more.
+                </p>
+                <p>
+                  The object of the website is to provide simpler solutions to
+                  aspiring entrepreneurs. While many of us do begin with a basic
+                  idea in our minds, it is hard to search for every type of data
+                  to sell with PLR licenses. And while there are many websites
+                  that offer digital products it is impossible to sort through
+                  all the different type of products to get to the one which you
+                  want. On Easy Resell, every aspiring entrepreneur can find
+                  everything they need to start a successful online business
+                  easily. All you need to do is buy from here and sell it on
+                  your own website or social media page.
+                </p>
+                <p className="font-semibold text-gray-900">
+                  Good Luck & Godspeed.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      <section className="pt-8 pb-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -477,36 +603,6 @@ const Dashboard = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Start Your Digital Business?
-          </h2>
-          <p className="text-xl mb-10 opacity-90 max-w-3xl mx-auto">
-            Join thousands of entrepreneurs who trust Digital Product for their
-            digital products. Start your journey to financial freedom today!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg">
-              <ShoppingCart className="w-5 h-5" />
-              <span>Browse Products</span>
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-200">
-              Contact Us
-            </button>
-          </div>
-        </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-          <div className="absolute -top-20 -left-20 w-40 h-40 bg-white/10 rounded-full"></div>
-          <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-white/10 rounded-full"></div>
-          <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-white/5 rounded-full"></div>
         </div>
       </section>
 
