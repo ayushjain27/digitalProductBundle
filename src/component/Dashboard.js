@@ -25,9 +25,9 @@ import Image2 from "../images/AI health reels.jpeg";
 import Image3 from "../images/AI premium reels.jpeg";
 import Image4 from "../images/Viral links.jpeg";
 import Image5 from "../images/Graphic Designer Pack.jpeg";
-import Image6 from "../images/50+ landing Pages Bundle.jpeg";
+import Image6 from "../images/Landingpage.jpeg";
 import Image7 from "../images/AI Monkey.jpeg";
-import Image8 from "../images/11000+ kids Preschool.jpeg";
+import Image8 from "../images/preschool.jpeg";
 import Image9 from "../images/luxury clips.jpeg";
 import Image10 from "../images/Thumbnails.jpeg";
 import Image11 from "../images/ADD.jpg";
@@ -129,13 +129,13 @@ const Dashboard = () => {
       link: 'https://superprofile.bio/vp/ultimate-graphic-designer-pack'
     },
     {
-      image: Image7,
+      image: Image6,
       price: "Price: Rs 149",
       gradient: "from-rose-400 to-fuchsia-500",
       link: 'https://superprofile.bio/vp/landing-pages-bundle--445'
     },
     {
-      image: Image6,
+      image: Image7,
       price: "Price: Rs 99",
       gradient: "from-emerald-400 to-lime-500",
       link: 'https://superprofile.bio/vp/ai-monkey-vlogs-898'
