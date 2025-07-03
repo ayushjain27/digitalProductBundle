@@ -147,7 +147,7 @@ const Dashboard = () => {
       link: 'https://superprofile.bio/vp/11000--kids-worksheet-bundle'
     },
     {
-      image: Image9,
+      image: Image10,
       price: "Price: Rs 99",
       gradient: "from-emerald-400 to-lime-500",
       link: 'https://superprofile.bio/vp/luxury-clips--725'
