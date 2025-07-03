@@ -129,13 +129,13 @@ const Dashboard = () => {
       link: 'https://superprofile.bio/vp/ultimate-graphic-designer-pack'
     },
     {
-      image: Image6,
+      image: Image7,
       price: "Price: Rs 149",
       gradient: "from-rose-400 to-fuchsia-500",
       link: 'https://superprofile.bio/vp/landing-pages-bundle--445'
     },
     {
-      image: Image7,
+      image: Image6,
       price: "Price: Rs 99",
       gradient: "from-emerald-400 to-lime-500",
       link: 'https://superprofile.bio/vp/ai-monkey-vlogs-898'
