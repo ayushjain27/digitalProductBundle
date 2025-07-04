@@ -30,7 +30,7 @@ import Image7 from "../images/AI Monkey.jpeg";
 import Image8 from "../images/preschool.jpeg";
 import Image9 from "../images/luxury clips.jpeg";
 import Image10 from "../images/Thumbnails.jpeg";
-import Image11 from "../images/ADD.jpg";
+import Image11 from "../images/ADD.jpeg";
 
 const Dashboard = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -160,7 +160,7 @@ const Dashboard = () => {
     },
     {
       image: Image11,
-      price: "Price: Rs 1899",
+      price: "Price: Rs 499",
       gradient: "from-emerald-400 to-lime-500",
       link: 'https://superprofile.bio/vp/the-digitalproductbundle'
     },
